@@ -212,5 +212,6 @@ module.exports = [
 'zilch',
 'zipper',
 'zodiac',
-'zombie',
+'zombie'
+
 ]

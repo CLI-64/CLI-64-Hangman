@@ -1,8 +1,8 @@
 'use strict';
 
-const Player = require('./newplayer.js')
-let Queue = require('./queue.js')
-const words = require('./words.js')
+const Player = require('./src/newplayer.js')
+let Queue = require('./src/queue.js')
+const words = require('./src/words.js')
 const io = require('socket.io-client');
 const host = 'http://localhost:3333';
 const socket = io.connect(host);
@@ -22,7 +22,6 @@ socket.on('newPlayer', payload => {
   // Creates a new player
   players[payload] = new Player(payload)
 })
-
 
 socket.on('connect', payload => {
   openingScreen()
